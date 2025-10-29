@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build image
-        run: docker build -t gilbertsitumorang30/fe-app:1.0.0 .
+        run: docker build -t gilbertsitumorang30/fe-app:latest .
 
       - name: Push image
-        run: docker push gilbertsitumorang30/fe-app:1.0.0
+        run: docker push gilbertsitumorang30/fe-app:latest
