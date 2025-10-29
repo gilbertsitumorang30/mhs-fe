@@ -1,0 +1,20 @@
+name: Publish docker image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push_to_regsitry:
+    name: Push docker image to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v5
+
+      - name: Build image
+        run: docker build -t gilbertsitumorang30/fe-app:latest .
+
+      - name: Push image
+        run: docker push gilbertsitumorang30/fe-app:latest
