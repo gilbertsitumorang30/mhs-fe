@@ -1,0 +1,6 @@
+services:
+  mhs-fe-app:
+    image: fe-app:latest
+    container_name: fe-app
+    ports:
+      - "3000:80"
